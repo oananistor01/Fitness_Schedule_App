@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container-extra{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+h1{
+    background-color: chocolate;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: 0.03em;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+/********** NAVIGATION TABS **********/
+.nav-link{
+    color:rgb(110, 110, 110);
+}
+
+.nav-link:hover{
+    color:chocolate;
+}
+
+.nav-link.active{
+    color:chocolate!important;
+    font-weight: bold;
+}
+
+/********** TAB CONTENT **********/
+.activity{
+    border: 1px solid #e1e2e2;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 5px;
+    color:rgb(110, 110, 110);
+}
+
+.form-select{
+    width: auto;
+    color:rgb(110, 110, 110);
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+label{
+    font-size: 0.8rem;
+}
+
+.time-input{
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    color:rgb(110, 110, 110);
+    font-size: 0.8rem;
+    margin-right: 3rem;
+    padding: .375rem .75rem;
+}
+
+.form-select:focus,
+.time-input:focus{
+    outline: none;
+    box-shadow: none;
+    border: 1.5px solid chocolate;
+}
+
+.btn-style{
+    background-color: chocolate;
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/* .btn-right{
+    align-self: flex-end;
+} */
