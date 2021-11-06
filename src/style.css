@@ -93,7 +93,6 @@ label{
 .nxt-prv-buttons{
     display: flex;
     justify-content: space-between;
-
 }
 
 th, td{

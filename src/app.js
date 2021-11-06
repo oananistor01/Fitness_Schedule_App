@@ -1,11 +1,11 @@
 import getInputData from "./ui.js";
-// console.log(getInputData());
 
+/******** SUMMARY TAB ********/
 let summaryTab = document.getElementById('nav-summary-tab');
 let tableBody = document.getElementById('my-table-body');
 
-//add an event listener to the Summary-Tab. 
-//When clicked and class = active, get the returned array from ui.js
+//add an event listener to the summary-tab. 
+//When clicked and class is 'active', get the returned array from ui.js
 //and for each array element create a table row + table data and put it in the table body
 summaryTab.addEventListener("click", showData);
 function showData(){
@@ -26,7 +26,8 @@ function showData(){
     }
 }
 
-//querySelectorAll returns a nodeList, therefor we must loop through the list 
+/******* PREVIOS AND NEXT BUTTON-FUNCTIONALITY *******/
+//querySelectorAll returns a nodeList, therefore we must loop through the list 
 //and put the eventListener on every button element
 let btn = document.querySelectorAll('.btn');
 
@@ -34,7 +35,7 @@ for (var i = 0 ; i < btn.length; i++) {
     btn[i].addEventListener('click' , openNextOrPreviousTab); 
  }
 
-//this function checks every button class List and triggers a click on the previous or on the next tab
+//this function checks every button classList and triggers a click on the previous or on the next tab
 function openNextOrPreviousTab(e) {
     if(e.currentTarget.classList.contains('monday-next')){
         document.getElementById('nav-tuesday-tab').click();
@@ -63,6 +64,5 @@ function openNextOrPreviousTab(e) {
     else if(e.currentTarget.classList.contains('friday-next')){
         document.getElementById('nav-summary-tab').click();
     }
-
 }
 
