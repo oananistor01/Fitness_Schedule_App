@@ -28,17 +28,41 @@ function showData(){
 
 //querySelectorAll returns a nodeList, therefor we must loop through the list 
 //and put the eventListener on every button element
-// let btn = document.querySelectorAll('.btn');
+let btn = document.querySelectorAll('.btn');
 
-// for (var i = 0 ; i < btn.length; i++) {
-//     btn[i].addEventListener('click' , openNextOrPreviousTab); 
-//  }
+for (var i = 0 ; i < btn.length; i++) {
+    btn[i].addEventListener('click' , openNextOrPreviousTab); 
+ }
 
-// function openNextOrPreviousTab(e) {
-//     if(e.currentTarget.classList.contains('monday-next')){
-//         console.log('monday');
-//         document.getElementById('nav-monday-tab').style.display = "none";
-//         document.getElementById('nav-tuesday-tab').style.display = "block";
-//         e.currentTarget.className += " active";
-//     }
-// }
+//this function checks every button class List and triggers a click on the previous or on the next tab
+function openNextOrPreviousTab(e) {
+    if(e.currentTarget.classList.contains('monday-next')){
+        document.getElementById('nav-tuesday-tab').click();
+    }
+    else if(e.currentTarget.classList.contains('tuesday-previous')){
+        document.getElementById('nav-monday-tab').click();
+    }
+    else if(e.currentTarget.classList.contains('tuesday-next')){
+        document.getElementById('nav-wednesday-tab').click();
+    }
+    else if(e.currentTarget.classList.contains('wednesday-previous')){
+        document.getElementById('nav-tuesday-tab').click();
+    }
+    else if(e.currentTarget.classList.contains('wednesday-next')){
+        document.getElementById('nav-thursday-tab').click();
+    }
+    else if(e.currentTarget.classList.contains('thursday-previous')){
+        document.getElementById('nav-wednesday-tab').click();
+    }
+    else if(e.currentTarget.classList.contains('thursday-next')){
+        document.getElementById('nav-friday-tab').click();
+    }
+    else if(e.currentTarget.classList.contains('friday-previous')){
+        document.getElementById('nav-thursday-tab').click();
+    }
+    else if(e.currentTarget.classList.contains('friday-next')){
+        document.getElementById('nav-summary-tab').click();
+    }
+
+}
+
