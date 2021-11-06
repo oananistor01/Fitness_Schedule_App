@@ -5,21 +5,28 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+:root {
+    --main-radius: 5px;
+    --main-border: 1px solid #dee2e6;
+    --main-color: #d2691e;
+    --main-text-color: #6e6e6e;;
+  }
+
 .container-extra{
     margin-top: 3rem;
     margin-bottom: 3rem;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
+    border: var(--main-border);
+    border-radius: var(--main-radius);
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
 }
 
 h1{
-    background-color: chocolate;
+    background-color: var(--main-color);
     color: white;
     padding: 10px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: var(--main-radius);
     letter-spacing: 0.03em;
     font-size: 2.5rem;
     font-weight: bold;
@@ -28,32 +35,34 @@ h1{
 
 /********** NAVIGATION TABS **********/
 .nav-link{
-    color:rgb(110, 110, 110);
+    color: var(--main-text-color);
 }
 
 .nav-link:hover{
-    color:chocolate;
+    color: var(--main-color);
 }
 
 .nav-link.active{
-    color:chocolate!important;
+    color: var(--main-color)!important;
     font-weight: bold;
 }
 
 /********** TAB CONTENT **********/
 .activity{
-    border: 1px solid #e1e2e2;
+    border: var(--main-border);
     padding: 1rem;
     margin: 1.5rem 0;
-    border-radius: 5px;
-    color:rgb(110, 110, 110);
+    border-radius: var(--main-radius);
+    color: var(--main-text-color);
 }
 
 .form-select{
     width: auto;
-    color:rgb(110, 110, 110);
+    color: var(--main-text-color);
     margin-bottom: 1rem;
     font-size: 0.8rem;
+    display: inline;
+    border: var(--main-border);
 }
 
 label{
@@ -61,9 +70,9 @@ label{
 }
 
 .time-input{
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    color:rgb(110, 110, 110);
+    border: var(--main-border);
+    border-radius: var(--main-radius);
+    color: var(--main-text-color);
     font-size: 0.8rem;
     margin-right: 3rem;
     padding: .375rem .75rem;
@@ -73,20 +82,21 @@ label{
 .time-input:focus{
     outline: none;
     box-shadow: none;
-    border: 1.5px solid chocolate;
+    border: 1.5px solid var(--main-color);
 }
 
 .btn-style{
-    background-color: chocolate;
+    background-color: var(--main-color);
     color: white;
 }
 
-.buttons{
+.nxt-prv-buttons{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
 }
 
-/* .btn-right{
-    align-self: flex-end;
-} */
+th, td{
+    color: var(--main-text-color);
+    font-size: smaller;
+}
